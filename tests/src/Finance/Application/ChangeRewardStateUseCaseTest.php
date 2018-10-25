@@ -32,6 +32,10 @@ class ChangeRewardStateUseCaseTest extends TestCase
         $this->changeRewardStateUseCase = new ChangeRewardStateUseCase($rewardRepository, $userService);
     }
 
+    /**
+     * We check the behavior the state changes in a Cashback Reward
+     * @return RewardEntity $reward
+     */
     public function testChangeCashbackReward()
     {
 
@@ -84,7 +88,9 @@ class ChangeRewardStateUseCaseTest extends TestCase
 
 
     /**
+     * We check the behavior the state changes in a Direct Reward (but isn't Cashback)
      * @depends testChangeCashbackReward
+     * @param RewardEntity $reward
      */
     public function testChangeDirectReward(RewardEntity $reward)
     {
@@ -109,7 +115,9 @@ class ChangeRewardStateUseCaseTest extends TestCase
     }
 
     /**
+     * We check the behavior the state changes in a referred reward
      * @depends testChangeDirectReward
+     * @param RewardEntity $reward
      */
     public function testChangeRefererReward(RewardEntity $reward)
     {

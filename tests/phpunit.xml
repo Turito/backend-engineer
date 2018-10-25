@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        backupGlobals="false"
+        backupStaticAttributes="false"
+        bootstrap="./index.php"
+        beStrictAboutTestsThatDoNotTestAnything="true"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        processIsolation="false"
+        stopOnFailure="false"
+        verbose="true">
+
+    <testsuites>
+        <testsuite name="Backend Test suite">
+            <directory suffix=".php">./src/</directory>
+
+        </testsuite>
+        <testsuite name="Backend Unit suite">
+            <directory suffix=".php">./unit/src/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">../src</directory>
+        </whitelist>
+    </filter>
+</phpunit>

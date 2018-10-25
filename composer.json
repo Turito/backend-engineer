@@ -1,0 +1,25 @@
+{
+  "name": "backend-test",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^7",
+    "phpunit/php-code-coverage": "^6"
+  },
+  "config": {
+    "bin-dir": "vendor/bin"
+  },
+  "require": {
+    "doctrine/orm": "2.5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "CSP\\": "src/",
+      "Test\\": "tests/"
+    }
+  },
+  "scripts": {
+  }
+}
